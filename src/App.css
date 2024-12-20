@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* glow for page title */
+@keyframes glowing {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      text-shadow: 0 0 13px rgba(255, 255, 255, 0.55);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+  }
+  
+  .animate-glow {
+    animation: glowing 5s infinite;
+  }
+  /* glow for page title */

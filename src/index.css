@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Declare fonts */
+@font-face {
+    font-family: 'Inxta';
+    src: url('./assets/fonts/Instagram Sans Bold.ttf') format('truetype');
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Inxta';
+    src: url('./assets/fonts/Instagram Sans.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Inxta';
+    src: url('./assets/fonts/Instagram Sans Light.ttf') format('truetype');
+    font-style: light;
+    font-weight: 300;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Inxta';
+    src: url('./assets/fonts/Instagram Sans Medium.ttf') format('truetype');
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'InxtaHeadline';
+    src: url('./assets/fonts/Instagram Sans Headline.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
+  }
+  /* Declare fonts */
+  
+  .customfont-title {
+    font-family: 'InxtaHeadline', sans-serif;
+  }
+  
+  .customfont-base {
+    font-family: 'Inxta', sans-serif;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* BackgroundBall CSS */
+body {
+    margin: 0;
+    background: #1e1e1e;
+  }
+  
+  .ball {
+    --delay: 0s;
+    --size: 0.4;
+    --speed: 10s;
+    aspect-ratio: 1;
+    width: calc(150% * var(--size));
+    background: linear-gradient(259.53deg, #2980B9 6.53%, #B9E4FF 95.34%);
+    filter: blur(10vw);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loop var(--speed) infinite linear;
+    animation-delay: var(--delay);
+    transform-origin: 50% 50%;
+    opacity: 0.3;
+    z-index: '-100px';
+  }
+  @keyframes loop {
+    0% {
+        transform: translate3D(0%, 51%, 0) rotate(0deg);
+   }
+    5% {
+        transform: translate3D(8%, 31%, 0) rotate(18deg);
+   }
+    10% {
+        transform: translate3D(22%, 13%, 0) rotate(36deg);
+   }
+    15% {
+        transform: translate3D(40%, 2%, 0) rotate(54deg);
+   }
+    20% {
+        transform: translate3D(46%, 21%, 0) rotate(72deg);
+   }
+    25% {
+        transform: translate3D(50%, 47%, 0) rotate(90deg);
+   }
+    30% {
+        transform: translate3D(53%, 80%, 0) rotate(108deg);
+   }
+    35% {
+        transform: translate3D(59%, 98%, 0) rotate(125deg);
+   }
+    40% {
+        transform: translate3D(84%, 89%, 0) rotate(144deg);
+   }
+    45% {
+        transform: translate3D(92%, 68%, 0) rotate(162deg);
+   }
+    50% {
+        transform: translate3D(99%, 47%, 0) rotate(180deg);
+   }
+    55% {
+        transform: translate3D(97%, 21%, 0) rotate(198deg);
+   }
+    60% {
+        transform: translate3D(80%, 7%, 0) rotate(216deg);
+   }
+    65% {
+        transform: translate3D(68%, 25%, 0) rotate(234deg);
+   }
+    70% {
+        transform: translate3D(59%, 41%, 0) rotate(251deg);
+   }
+    75% {
+        transform: translate3D(50%, 63%, 0) rotate(270deg);
+   }
+    80% {
+        transform: translate3D(38%, 78%, 0) rotate(288deg);
+   }
+    85% {
+        transform: translate3D(21%, 92%, 0) rotate(306deg);
+   }
+    90% {
+        transform: translate3D(3%, 79%, 0) rotate(324deg);
+   }
+    100% {
+        transform: translate3D(0%, 51%, 0) rotate(360deg);
+   }
+  }
+  .glow-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -100;
+  }
+  
+  @media (max-width: 768px) {
+  .ball {
+    --speed: 8s;
+  }   
+  
+  .glow-container {
+    min-height: 100vh;
+  }
+  }
+  /* BackgroundBall CSS */
