@@ -1,4 +1,5 @@
 import React from "react";
+import { DialogPanel } from "@headlessui/react";
 
 const lists: { [key: number]: string[] } = {
   1: [
@@ -26,7 +27,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ setIsVisible, className }) => {
   return (
-    <div className={`${className}`}>
+    <DialogPanel className={`${className}`}>
       <div className="fixed inset-0 bg-black bg-opacity-30 min-w-full min-h-full"></div>
 
       <div className='customfont-base fixed inset-0 flex justify-center items-center md:px-0 px-6'>
@@ -88,7 +89,7 @@ const Modal: React.FC<ModalProps> = ({ setIsVisible, className }) => {
           </div>
         </div>
       </div>
-    </div>
+    </DialogPanel>
   );
 };
 

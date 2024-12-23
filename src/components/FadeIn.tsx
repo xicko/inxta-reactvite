@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef, useEffect, ReactNode } from "react";
 import { useSpring, animated } from "react-spring";
 

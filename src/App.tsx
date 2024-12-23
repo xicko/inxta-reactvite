@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Modal from './components/Modal';
 import LocomotiveScroll from './components/LocomotiveScroll';
 import FadeIn from './components/FadeIn';
+import { Dialog } from "@headlessui/react"; // asset modal
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,9 +31,9 @@ function App() {
         </FadeIn>
       </LocomotiveScroll>
 
-      
-      <Modal className={`transition-opacity ease-in-out duration-150 ${isVisible ? 'opacity-100 block' : 'opacity-0 hidden'}`} setIsVisible={setIsVisible}/>
-      
+      <Dialog open={isVisible} onClose={() => setIsVisible(false)} transition className='transition duration-200 ease-out data-[closed]:opacity-0'>
+        <Modal setIsVisible={setIsVisible} className={''}/>
+      </Dialog>
     </main>
   );
 }
